@@ -10,7 +10,7 @@ Founded in 2014, Leuleu Accessorize began as a small boutique offering **afforda
 
 In 2021, Leuleu Accessorize adopted its **first CRM system**, integrating multiple data sources to streamline operations. However, supplier-related data from Chinese manufacturers was not included in the system. As a result:
 
-- Key details like **product prices, order numbers, SKUs, and supplier information were missing**.
+- Key details like **product imported prices, order numbers, SKUs, and supplier information were missing**.
 - Inventory records only tracked item counts without recording their costs, making it difficult to determine **total inventory value**.
 - The lack of order-level transparency created difficulties in **tracing orders, managing suppliers, and assessing stock valuation**.
 
@@ -23,7 +23,8 @@ To address these issues, my primary tasks in this project include:
 To accomplish the project goals, the following tools and techniques were utilized:
 - **Web Scraping with Python**: 
     - Extracted order data from a Chinese E-commerce platform spanning 2022 to 2025
-    - Used Selenium and BeautifulSoup to navigate challenges like lack of APIs, CAPTCHA restrictions, and dynamic content loading.
-
+    - Used **Selenium** and **BeautifulSoup** to navigate challenges like lack of APIs, CAPTCHA restrictions, and dynamic content loading.
 - **Data Cleaning & EDA with MySQL**: Processed and cleaned raw data using MySQL, handling duplicates and exploring insights about order trends and patterns.
 - **Data Visualization with Power BI**: Designed interactive dashboards to visualize order trends and volume fluctuations, provising actionable insights to enhance decision-making in inventory and supplier management.
+
+# Web Scraping with Python 🕸️
