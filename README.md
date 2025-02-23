@@ -20,3 +20,10 @@ To address these issues, my primary tasks in this project include:
 - **Performing order trend and volume analysis** to uncover actionable insights.
 
 ### Techniques Used
+To accomplish the project goals, the following tools and techniques were utilized:
+- **Web Scraping with Python**: 
+    - Extracted order data from a Chinese E-commerce platform spanning 2022 to 2025
+    - Used Selenium and BeautifulSoup to navigate challenges like lack of APIs, CAPTCHA restrictions, and dynamic content loading.
+
+- **Data Cleaning & EDA with MySQL**: Processed and cleaned raw data using MySQL, handling duplicates and exploring insights about order trends and patterns.
+- **Data Visualization with Power BI**: Designed interactive dashboards to visualize order trends and volume fluctuations, provising actionable insights to enhance decision-making in inventory and supplier management.
