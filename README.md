@@ -31,7 +31,7 @@ To accomplish the project goals, the following tools and techniques were utilize
 
 Before scraping the data, it's essential to understand the structure of the webpage and how the information is displayed:
 
-<img src='image/order_list.png' width='800' align='center'>
+<img src='image/Order_list.png' width='800' align='center'>
 
 ### Inspecting and Locating Key Data Points
 
@@ -41,7 +41,7 @@ To extract relevant details such as order number and supplier name, we use the b
 
 Once the key elements are located, we use BeautifulSoup to parse the HTML and extract the required information into a structured dataset. The [Local_file_scraping.ipynb](code/Local_file_scraping.ipynb) notebook demonstrates the full implementation, where we loop through each order to extract its details. 
 
-At this stage, we are testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website.
+At this stage, we are testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website. 
 
 
 
