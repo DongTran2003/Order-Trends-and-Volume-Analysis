@@ -29,4 +29,4 @@ To accomplish the project goals, the following tools and techniques were utilize
 
 # Web Scraping with Python 🕸️
 
-<img src='image.png' width='500' align='center'>
+<img src='image/image.png' width='500' align='center'>
