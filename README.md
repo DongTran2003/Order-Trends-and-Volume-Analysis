@@ -31,17 +31,21 @@ To accomplish the project goals, the following tools and techniques were utilize
 
 Before scraping the data, it's essential to understand the structure of the webpage and how the information is displayed:
 
-<img src='image/Order_list.png' width='800' align='center'>
+<img src='image/Order_list.png' width='800' align='center'> 
+
 
 ### Inspecting and Locating Key Data Points
 
-To extract relevant details such as order number and supplier name, we use the browser’s Inspect Tool (press F12) to analyze the page’s HTML structure. This helps identify the exact elements where the data is stored.
+To extract relevant details such as order number and supplier name, we use the browser’s Inspect Tool (press F12) to analyze the page’s HTML structure. This helps identify the exact elements where the data is stored. 
 
 ### Scraping Data with BeautifulSoup
 
-Once the key elements are located, we use BeautifulSoup to parse the HTML and extract the required information into a structured dataset. The [Local_file_scraping.ipynb](code/Local_file_scraping.ipynb) notebook demonstrates the full implementation, where we loop through each order to extract its details. 
+Once the key elements are located, we use BeautifulSoup to parse the HTML and extract the required information into a structured dataset. The [Local_file_scraping.ipynb](code/Local_file_scraping.ipynb) notebook demonstrates the full implementation, where we loop through each order to extract its details.
 
 At this stage, we are testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website. 
 
+<img src='image/CSV.png' width='600' align='center'>
 
+\
+The saved file now contains the following attributes: *order_id*, *date*, *supplier*, *supplier_link*, *image* (which is saved as the url link to the image), *product_link*, *price*, *quantity*, *total_before_discount*, and *total_after_discount*. m
 
