@@ -44,8 +44,119 @@ Once the key elements are located, we use BeautifulSoup to parse the HTML and ex
 
 At this stage, we are testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website. 
 
-<img src='image/CSV.png' width='600' align='center'>
+<img src='image/CSV.png' width='800' align='center'>
 
 \
-The saved file now contains the following attributes: *order_id*, *date*, *supplier*, *supplier_link*, *image* (which is saved as the url link to the image), *product_link*, *price*, *quantity*, *total_before_discount*, and *total_after_discount*. m
+The saved file now contains the following attributes: 
+- ***order_id***
+- ***date***
+- ***supplier*** 
+- ***supplier_link***
+- ***image*** (which is saved as the url link to the image)
+- ***product_link*** 
+- ***price*** and ***quantity***
+- ***total_before_discount*** and ***total_after_discount***.
 
+
+### Scraping Data from the Live Website
+
+After successfully testing our code on a local HTML file, we can now run it on the live 1688 website. This requires Selenium, a Python package used for automating web interactions.
+
+The key difference between scraping from a local file versus a live website is the need to:
+
+- Log in manually to bypass **CAPTCHA**.
+- **Implement pagination** so the script can loop through multiple pages (from page 1 to 68, covering orders dating back to 2022), which can be done by adding 1 more loop to the current code.
+
+By incorporating these adjustments, we can extract all order details efficiently and store them in a structured dataset. The [Live_website_scraping](code/Live_website_scraping.ipynb) notebook shows how I addressed these tasks and import the extracted data into a [final CSV file](code/all_orders_2022_2025.csv) 
+
+*Note: To protect the privacy of order details and supplier information, certain columns have been removed.*
+
+# Data Cleaning & EDA with MySQL
+
+The current dataset, which can be imported into MySQL using [all_orders_database_import.sql](code/all_orders_database_import.sql) contains some null values in the ***total_before_discount*** column. This occurs because certain orders did not receive any discounts, meaning the final price was directly stored in ***total_after_discount***. To ensure consistency, we can update ***total_before_discount*** to ***match total_after_discount*** for these cases:
+
+```SQL
+UPDATE all_orders
+SET total_before_discount = total_after_discount
+WHERE total_before_discount IS NULL;
+```
+
+To improve tracking and data integrity, I have added ***id*** and ***supplier_id*** columns, serving as unique identifiers for each item and supplier, respectively. 
+
+### Analyzing Trends with SQL
+
+**MySQL** is a powerful tool for uncovering trends and insights in the dataset. The [SQL_EDA.sql](code/SQL_EDA.sql) file contains 12 querries designed to analyze various aspects of order trends and spending behavior. These queries help the business owner gain valuable insights, such as:
+
+```SQL
+-- How often do I place orders on monthly average
+WITH total_months_each_year AS (
+	SELECT 
+		YEAR(date) AS year, 
+		COUNT(DISTINCT MONTH(date))  AS total_month
+    FROM all_orders 
+    GROUP BY YEAR(date)
+    )
+, total_orders_each_year AS (
+	SELECT
+		COUNT(DISTINCT order_id) as total_orders,
+		YEAR(date) as year
+	FROM all_orders
+	GROUP BY 2
+    )
+SELECT 
+	t1.year,
+    t1.total_month,
+    t2.total_orders,
+    t2.total_orders/t1.total_month AS AVG_order_permonth
+FROM total_months_each_year t1
+JOIN total_orders_each_year t2 ON t1.year = t2.year
+ORDER BY 1;
+```
+The result will be following as:
+
+| Year | Total Months | Total Orders | Avg Orders per Month |
+|------|-------------|--------------|----------------------|
+| 2022 | 9           | 398          | 44.2222              |
+| 2023 | 12          | 812          | 67.6667              |
+| 2024 | 12          | 1282         | 106.8333             |
+| 2025 | 2           | 106          | 53.0000              |
+
+Or knowing the longest gap between orders, which is **35 days**:
+
+```SQL
+-- What is the longest gap between orders?
+WITH CTE AS (
+	SELECT DISTINCT order_id, date FROM all_orders 
+)
+SELECT
+    date,
+    LAG(date, 1, 0) OVER(ORDER BY date) AS last_order_day,
+    DATEDIFF(date, LAG(date, 1, 0) OVER(ORDER BY date)) AS day_gap
+FROM CTE
+ORDER BY 3 DESC
+LIMIT 5;
+```
+
+| Date       | Last Order Day | Day Gap|
+|------------|--------------|--------|
+| 2023-02-07 | 2023-01-03   | 35     |
+| 2025-02-07 | 2025-01-15   | 23     |
+| 2024-02-20 | 2024-01-29   | 22     |
+| 2024-08-23 | 2024-08-09   | 14     |
+| 2022-09-04 | 2022-08-22   | 13     |
+
+Or having an **order summary** from all the suppliers:
+
+| Supplier ID | Supplier Name                          | Total Orders | Total Items | Total Spent | Total Discount |
+|------------|--------------------------------------|--------------|-------------|-------------|----------------|
+| 528        | 义乌市韩爵饰品厂                     | 67           | 1459        | 74709.26    | 1096.23        |
+| 215        | 义乌市宝钰饰品有限公司               | 35           | 315         | 36951.65    | 212.51         |
+| 265        | 义乌市悦楠服饰有限公司               | 35           | 312         | 81172.16    | 1968.20        |
+| 69         | 临海市梦纤语服装加工厂               | 27           | 256         | 85777.35    | 0.00           |
+| 97         | 义乌市紧铭电子商务有限公司           | 25           | 520         | 11949.90    | 2.10           |
+
+# Data Visualization with Power BI
+
+MySQL helps uncovering some insights, but it would be a lot more powerful and actionable with visualizations. After connecting MySQL server to Power BI and import the data into the app, I started building a dashboard that summaries all the key points important for understand the order trends and spending of the business:
+
+<img src='image/Dashboard.png' width='900'>
