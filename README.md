@@ -3,6 +3,8 @@
 ### About the project
 This project focuses on analyzing order trends and volume over time for **Leuleu Accessorize**, a growing jewelry and accessories brand in Vietnam. The goal is to provide data-driven insights to support decision-making and improve inventory and supplier management. Through in-depth analysis and recommendations, this project aims to help the business optimize its ordering process and enhance transparency in inventory tracking.
 
+Beyond the technical aspects, this project is especially meaningful to me because it allows me to help my sister, the business owner, navigate the world of digital transformation. Before this, she managed her business without leveraging data, unaware of how data analytics could significantly improve her operations. By introducing her to data-driven decision-making, I am not only helping her solve existing business challenges but also demonstrating **the power of analytics in real-world applications**—a passion that drives my work as a data analyst.
+
 ### Case Study: Leuleu Accessorize
 Founded in 2014, Leuleu Accessorize began as a small boutique offering **affordable, stylish, and trendy jewelry**. Over the years, it expanded rapidly, adding new product lines such as Leuleu Lingerie and Leuleu Aeon Mall Shop. However, with this growth came operational challenges, particularly in inventory and supplier management.
 
@@ -18,6 +20,8 @@ To address these issues, my primary tasks in this project include:
 
 - **Extracting and consolidating a dataset containing detailed order records** from 2022 onwards, including order number, import dates, prices and quantities of items within each order, total paid before and after discount, and supplier details.
 - **Performing order trend and volume analysis** to uncover actionable insights.
+
+This project has been an incredible opportunity to apply my data analysis skills to a real-world business while directly helping my sister transform her business operations. It also strengthens my expertise in data extraction, analysis, and visualization, which are essential skills in my career as a data analyst.
 
 ### Techniques Used
 To accomplish the project goals, the following tools and techniques were utilized:
@@ -112,7 +116,7 @@ FROM total_months_each_year t1
 JOIN total_orders_each_year t2 ON t1.year = t2.year
 ORDER BY 1;
 ```
-The result will be following as:
+The result will be as following:
 
 | Year | Total Months | Total Orders | Avg Orders per Month |
 |------|-------------|--------------|----------------------|
@@ -157,6 +161,7 @@ Or having an **order summary** from all the suppliers:
 
 # Data Visualization with Power BI
 
-MySQL helps uncovering some insights, but it would be a lot more powerful and actionable with visualizations. After connecting MySQL server to Power BI and import the data into the app, I started building a dashboard that summaries all the key points important for understand the order trends and spending of the business:
+MySQL helps uncovering some insights, but it would be a lot more powerful and actionable with visualizations. After connecting MySQL server to Power BI and import the data into the app, I started building a dashboard that summaries all the key points important for understand the order trends and spending of the business. The Power BI dashboard can be downloaded [here](code/LeuleuReport.pbix):
 
 <img src='image/Dashboard.png' width='900'>
+
