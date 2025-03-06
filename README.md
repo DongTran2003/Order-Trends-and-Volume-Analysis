@@ -182,5 +182,5 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
 <img src='image/Dashboard.png' width='900'>
 
-Overall, 
-
+\
+Overall, the business has spent around ¥3.7M during the given period, with a total of 24,259 it
