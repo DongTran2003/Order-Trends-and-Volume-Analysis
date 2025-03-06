@@ -9,12 +9,13 @@ WHERE total_before_discount IS NULL;
 
 -- Add supplier id
 ALTER TABLE all_orders
-ADD COLUMN supplier_id INT;
+ADD COLUMN supplier_id INT; -- This column will initially have NULL values for all rows
 
 -- Assign supplier_id to each supplier
 UPDATE all_orders a
 JOIN (
-    SELECT supplier, DENSE_RANK() OVER (ORDER BY supplier) AS rank_id
+    SELECT supplier, 
+    DENSE_RANK() OVER (ORDER BY supplier) AS rank_id -- Assigns a unique number to each supplier unique number
     FROM all_orders
 ) ranked ON a.supplier = ranked.supplier
 SET a.supplier_id = ranked.rank_id;

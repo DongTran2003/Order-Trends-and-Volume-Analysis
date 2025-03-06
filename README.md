@@ -26,14 +26,14 @@ This project has been an incredible opportunity to apply my data analysis skills
 ### Techniques Used
 To accomplish the project goals, the following tools and techniques were utilized:
 - **Web Scraping with Python**: 
-    - Extracted all order data from 1688, a Chinese E-commerce platform spanning 2022 to 2025 using **BeautifulSoup**
+    - Extracted all order data from **1688**, a Chinese E-commerce platform spanning 2022 to 2025 using **BeautifulSoup**
     - Used **Selenium** to navigate challenges like lack of APIs, CAPTCHA restrictions, and dynamic content loading.
-- **Data Cleaning & EDA with MySQL**: Processed and cleaned raw data using MySQL, handling duplicates and exploring insights about order trends and patterns.
+- **Data Cleaning & EDA with MySQL**: Processed, cleaned raw data using MySQL, and explored insights about order trends and spending patterns.
 - **Data Visualization with Power BI**: Designed interactive dashboards to visualize order trends and volume fluctuations, provising actionable insights to enhance decision-making in inventory and supplier management.
 
 # Web Scraping with Python 🕸️
 
-Before scraping the data, it's essential to understand the structure of the webpage and how the information is displayed:
+Before scraping the data, it's essential to understand the structure of the 1688 webpage and how the information is displayed in the order list:
 
 <img src='image/Order_list.png' width='800' align='center'> 
 
@@ -64,16 +64,16 @@ The saved file now contains the following attributes:
 
 ### Scraping Data from the Live Website
 
-After successfully testing our code on a local HTML file, we can now run it on the live 1688 website. This requires Selenium, a Python package used for automating web interactions.
+After successfully testing our code on a local HTML file, we can now run it on the live 1688 website. This requires **Selenium**, a Python package used for automating web interactions.
 
 The key difference between scraping from a local file versus a live website is the need to:
 
 - Log in manually to bypass **CAPTCHA**.
 - **Implement pagination** so the script can loop through multiple pages (from page 1 to 68, covering orders dating back to 2022), which can be done by adding 1 more loop to the current code.
 
-By incorporating these adjustments, we can extract all order details efficiently and store them in a structured dataset. The [Live_website_scraping](code/Live_website_scraping.ipynb) notebook shows how I addressed these tasks and import the extracted data into a [final CSV file](code/all_orders_2022_2025.csv) 
+By incorporating these adjustments, we can extract all order details efficiently and store them in a structured dataset. The [Live_website_scraping](code/Live_website_scraping.ipynb) notebook shows how I addressed these tasks and import the extracted data into a [final CSV file](code/all_orders_2022_2025.csv), which has more than 24,000 rows, or ordered items.
 
-*Note: To protect the privacy of order details and supplier information, certain columns have been removed.*
+*Note: To protect the privacy of order details and supplier information, **certain columns have been removed**.
 
 # Data Cleaning & EDA with MySQL
 
@@ -86,6 +86,21 @@ WHERE total_before_discount IS NULL;
 ```
 
 To improve tracking and data integrity, I have added ***id*** and ***supplier_id*** columns, serving as unique identifiers for each item and supplier, respectively. 
+
+```SQL
+-- Add supplier id
+ALTER TABLE all_orders
+ADD COLUMN supplier_id INT; -- This column will initially have NULL values for all rows
+
+-- Assign supplier_id to each supplier
+UPDATE all_orders a
+JOIN (
+    SELECT supplier, 
+    DENSE_RANK() OVER (ORDER BY supplier) AS rank_id -- Assigns a unique number to each supplier unique number
+    FROM all_orders
+) ranked ON a.supplier = ranked.supplier
+SET a.supplier_id = ranked.rank_id;
+```
 
 ### Analyzing Trends with SQL
 
@@ -161,7 +176,11 @@ Or having an **order summary** from all the suppliers:
 
 # Data Visualization with Power BI
 
-MySQL helps uncovering some insights, but it would be a lot more powerful and actionable with visualizations. After connecting MySQL server to Power BI and import the data into the app, I started building a dashboard that summaries all the key points important for understand the order trends and spending of the business. The Power BI dashboard can be downloaded [here](code/LeuleuReport.pbix):
+MySQL provides valuable insights, but visualizing the data makes it even more powerful and actionable. By connecting the MySQL server to Power BI and importing the dataset, I built an interactive dashboard that highlights key trends in order volume and spending. This dashboard offers a clear, data-driven view of the business's purchasing patterns, making it easier to identify opportunities for optimization.
+
+You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
 <img src='image/Dashboard.png' width='900'>
+
+Overall, 
 
