@@ -189,7 +189,7 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - Notably, order volumes tend to **drop immediately after high-order months**, indicating that stock purchased during peak months sustains operations for the following 1-2 months before replenishment is needed. This pattern highlights an efficient inventory turnover cycle, ensuring stock availability while preventing overstocking.
 
 #### Spending behavior & Pricing Strategy
-- Despite total spending being the same for **2023 and 2024**, the number of orders increased by 470 in 2024, suggesting a shift toward **lower-cost items** or **smaller, more frequent purchases**.  
+- Despite total spending being the same for **2023 and 2024, around ¥1,5M**, the number of orders increased by 470 in 2024, suggesting a shift toward **lower-cost items** or **smaller, more frequent purchases**.  
 - Additionally, the **average spending per order** has steadily decreased, from ¥1,818 in 2022 to ¥872 in 2025. This trend suggests that the business is either adopting a lower pricing strategy or increasing order frequency while reducing the number of items per order. 
 - The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
 - The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
@@ -199,3 +199,42 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - Despite the increase, the **total discount across all orders was only ¥36,563**, accounting for **less than 1%** of total spending—suggesting discounts **have not played a major role in cost reduction**.
 - Suppliers **126 and 69** contributed the **highest spending (~¥90,000 each)** but **offered no discounts** at any time, which might indicate **strong demand for their products** or **a lack of price negotiations**.
 - Some suppliers provided significant discounts, possibly reflecting **bulk purchase deals or promotional offers**. This suggests that strategic supplier selection could further optimize costs if better discount opportunities are explored.
+
+### Potential Business Action
+
+ #### 1. Optimize Inventory Management & Forecasting
+- **Action**: Leverage seasonal order trends (peaks in March, July, and October) to anticipate demand and adjust stock levels accordingly. This will prevent stockouts during peak periods while avoiding excess inventory in low-demand months.
+- **Implementation**: 
+  - Use historical sales data to build a predictive demand model
+  - Implement an automated reorder system to replenish stock efficiently.
+
+#### 2. Improve Cost Efficiency Through Supplier Negotiation
+- **Action**: Negotiate better discounts with high-spend suppliers (e.g., Supplier 126 & 69) who currently offer no discounts.This is because even a small discount (e.g., 5%) on these major suppliers could result in significant cost savings.
+- **Implementation**: 
+  - Group purchases with selected suppliers to qualify for bulk discounts.
+  - Explore alternative suppliers who offer similar products at lower prices.
+
+#### 3. Refine Pricing & Order Strategy
+- **Action**: Analyze the profitability of the lower-priced, high-frequency order strategy to ensure margins are sustainable. This is because the trend of more frequent, smaller orders suggests a shift in strategy, but it may increase operational costs (e.g., logistics, handling).
+- **Implementation**:
+  - Conduct a cost-benefit analysis to compare bulk vs. frequent ordering.
+  - If feasible, consolidate smaller orders to reduce costs.
+
+#### 4. Streamline Supplier Base & Sourcing Strategy
+- **Action**: Assess whether expanding the supplier base from 186 (2022) to 610 (2024) is beneficial or leading to inefficiencies as too many suppliers can increase complexity and procurement costs.
+- **Implementation**:
+  - Identify underperforming suppliers and consolidate orders with the most reliable ones.
+  - Establish long-term partnerships with key suppliers to secure better terms & pricing.
+
+#### 5. Implement Data-Driven Order Timing
+- **Action**: Encourage ordering in low-demand months to balance workload & reduce peak-season pricing risks. Additionally, suppliers may offer better prices during off-peak months.
+- **Implementation**:
+  - Analyze past pricing trends to determine the best months for placing orders.
+  - Plan early purchases for high-demand months to avoid last-minute price surges
+
+#### Key Takeaways:
+- ✅ Optimize stock replenishment based on seasonal trends.
+- ✅ Negotiate better supplier terms for high-spend suppliers.
+- ✅ Assess whether frequent small orders are more cost-effective than bulk purchases.
+- ✅ Evaluate supplier expansion efficiency vs. complexity.
+- ✅ Use data-driven purchasing to secure better pricing and order timing
