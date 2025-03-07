@@ -168,10 +168,10 @@ Or having an **order summary** from all the suppliers:
 
 | Supplier ID | Supplier Name                          | Total Orders | Total Items | Total Spent | Total Discount |
 |------------|--------------------------------------|--------------|-------------|-------------|----------------|
-| 528        | 义乌市韩爵饰品厂                     | 67           | 1459        | 74709.26    | 1096.23        |
-| 215        | 义乌市宝钰饰品有限公司               | 35           | 315         | 36951.65    | 212.51         |
-| 265        | 义乌市悦楠服饰有限公司               | 35           | 312         | 81172.16    | 1968.20        |
-| 69         | 临海市梦纤语服装加工厂               | 27           | 256         | 85777.35    | 0.00           |
+| 528        | 义乌市韩爵饰品厂                     | 67           | 19855        | 74709.26    | 1096.23        |
+| 215        | 义乌市宝钰饰品有限公司               | 35           | 5275         | 36951.65    | 212.51         |
+| 265        | 义乌市悦楠服饰有限公司               | 35           | 11982         | 81172.16    | 1968.20        |
+| 69         | 临海市梦纤语服装加工厂               | 27           | 1318         | 85777.35    | 0.00           |
 | 97         | 义乌市紧铭电子商务有限公司           | 25           | 520         | 11949.90    | 2.10           |
 
 # Data Visualization with Power BI
@@ -182,5 +182,20 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
 <img src='image/Dashboard.png' width='900'>
 
-\
-Overall, the business has spent around ¥3.7M during the given period, with a total of 24,259 it
+
+#### Seasonality and Order Volume Trends
+- Overall, the business has spent around ¥3.7M during the given period, purchasing 581,000 items across 2,598 orders.
+- **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in March (212 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**.
+- Notably, order volumes tend to **drop immediately after high-order months**, indicating that stock purchased during peak months sustains operations for the following 1-2 months before replenishment is needed. This pattern highlights an efficient inventory turnover cycle, ensuring stock availability while preventing overstocking.
+
+#### Spending behavior & Pricing Strategy
+- Despite total spending being the same for **2023 and 2024**, the number of orders increased by 470 in 2024, suggesting a shift toward **lower-cost items** or **smaller, more frequent purchases**.  
+- Additionally, the **average spending per order** has steadily decreased, from ¥1,818 in 2022 to ¥872 in 2025. This trend suggests that the business is either adopting a lower pricing strategy or increasing order frequency while reducing the number of items per order. 
+- The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
+- The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
+
+#### Supplier performance
+- Discounts were **nonexistent in 2022-2023 (0%)** but rose to **2% in 2024 and 7% in 2025**, indicating a **more aggressive discounting strategy in recent years**.
+- Despite the increase, the **total discount across all orders was only ¥36,563**, accounting for **less than 1%** of total spending—suggesting discounts **have not played a major role in cost reduction**.
+- Suppliers **126 and 69** contributed the **highest spending (~¥90,000 each)** but **offered no discounts** at any time, which might indicate **strong demand for their products** or **a lack of price negotiations**.
+- Some suppliers provided significant discounts, possibly reflecting **bulk purchase deals or promotional offers**. This suggests that strategic supplier selection could further optimize costs if better discount opportunities are explored.
