@@ -194,7 +194,8 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
 - The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
 
-     <img src='image/Num_of_supplier.png' width=500>
+     <img src='image/Num_of_supplier.png' width=300 >
+     <figcaption>Bar chart demonstrating the number of suppliers per year</figcaption>
 
 #### Supplier performance
 - Discounts were **nonexistent in 2022-2023 (0%)** but rose to **2% in 2024 and 7% in 2025**, indicating a **more aggressive discounting strategy in recent years**.
