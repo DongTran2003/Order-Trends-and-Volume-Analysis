@@ -24,7 +24,7 @@ To address these issues, my primary tasks in this project include:
 - **Extracting and consolidating a dataset containing detailed order records** from 2022 onwards, including order number, import dates, prices and quantities of items within each order, total paid before and after discount of each order, and relevant supplier details.
 - **Performing order trend and volume analysis** to uncover actionable insights.
 
-This project has been an incredible opportunity to apply my data analysis skills to a real-world business while directly helping my sister transform her business operations. It also strengthens my expertise in data extraction, analysis, and visualization, which are essential skills in my career as a data analyst.
+This project has been an incredible opportunity to apply my data analysis skills to a real-world business while directly helping rge business owner transform her business operations. It also strengthens my expertise in data extraction, analysis, and visualization, which are essential skills in my career as a data analyst.
 
 ### Techniques Used
 To accomplish the project goals, the following tools and techniques were utilized:
@@ -253,7 +253,7 @@ Before this project, my experience with web scraping and Python coding was limit
 
 Another significant challenge was that the target webpage was written in Chinese, making it difficult for me to understand its structure and locate key data points. Over time, this became easier as I collaborated with the **inventory team** of the business, whose insights helped me navigate the data more effectively. 
 
-Despite these challenges, I gained **valuable new skills** and discovered different approaches to problem-solving. This project was a **real-world experience** where I acted as a data analyst, helping a business owner gain insights into **order trends and volume** while demonstrating the importance of **data analytics in business operations and decision-making**. Most importantly, it was personally meaningful to support my sister in taking her **first step toward digital transformation**, reinforcing the impact that data-driven strategies can have on small businesses.
+Despite these challenges, I gained **valuable new skills** and discovered different approaches to problem-solving. This project was a **real-world experience** where I acted as a data analyst, helping the business owner gain insights into **order trends and volume** while demonstrating the importance of **data analytics in business operations and decision-making**. Most importantly, it was personally meaningful to support the business in taking its **first step toward digital transformation**, reinforcing the impact that data-driven strategies can have on small businesses.
 
 # Conclusion
 
