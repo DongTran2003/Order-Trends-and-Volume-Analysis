@@ -185,7 +185,7 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
 
 #### Seasonality and Order Volume Trends
-- Overall, the business has spent around ¥3.7M (more than AUD $800,000) during the given period, purchasing 581,000 items across 2,598 orders.
+- Overall, the business has spent around **3.7M Chinese Yuan** during the given period, purchasing **581,000 items across 2,598 orders**.
 - **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in May (219 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**.
 - Notably, order volumes tend to **drop immediately after high-order months**, indicating that stock purchased during peak months sustains operations for the following 1-2 months before replenishment is needed. This pattern highlights an efficient inventory turnover cycle, ensuring stock availability while preventing overstocking.
 
@@ -208,13 +208,13 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 ### Potential Business Action
 
  #### 1. Optimize Inventory Management & Forecasting
-- **Action**: Leverage seasonal order trends (peaks in March, July, and October) to anticipate demand and adjust stock levels accordingly. This will prevent stockouts during peak periods while avoiding excess inventory in low-demand months.
+- **Action**: Leverage seasonal order trends (peaks in May, July, and October) to anticipate demand and adjust stock levels accordingly. This will prevent stockouts during peak periods while avoiding excess inventory in low-demand months.
 - **Implementation**: 
   - Use historical sales data to build a predictive demand model
   - Implement an automated reorder system to replenish stock efficiently.
 
 #### 2. Improve Cost Efficiency Through Supplier Negotiation
-- **Action**: Negotiate better discounts with high-spend suppliers (e.g., Supplier 126 & 69) who currently offer no discounts.This is because even a small discount (e.g., 5%) on these major suppliers could result in significant cost savings.
+- **Action**: Negotiate better discounts with high-spend suppliers (e.g., Supplier 126 & 69) who currently offer no discounts. This is because even a small discount (e.g., 5%) on these major suppliers could result in significant cost savings.
 - **Implementation**: 
   - Group purchases with selected suppliers to qualify for bulk discounts.
   - Explore alternative suppliers who offer similar products at lower prices.
@@ -223,7 +223,7 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - **Action**: Analyze the profitability of the lower-priced, high-frequency order strategy to ensure margins are sustainable. This is because the trend of more frequent, smaller orders suggests a shift in strategy, but it may increase operational costs (e.g., logistics, handling).
 - **Implementation**:
   - Conduct a cost-benefit analysis to compare bulk vs. frequent ordering.
-  - If feasible, consolidate smaller orders to reduce costs.
+  - If possible, consolidate smaller orders to reduce costs.
 
 #### 4. Streamline Supplier Base & Sourcing Strategy
 - **Action**: Assess whether expanding the supplier base from 186 (2022) to 610 (2024) is beneficial or leading to inefficiencies as too many suppliers can increase complexity and procurement costs.
@@ -248,11 +248,17 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 # Challenges during the Project
 Before this project, my experience with web scraping and Python coding was limited. However, with a strong motivation to support my sister’s business, I conducted extensive research on automating data collection from web pages. While AI tools like ChatGPT provided valuable assistance, this project could not have been completed without human intervention. Debugging, understanding how the code works in different scenarios, and adapting AI-generated code to fit specific requirements required **critical thinking and problem-solving skills**. I believe that **levaraging AI alongside human domain and expertise** enhances project outcomes, making it a powerfull skill for any professional nowadays.
 
-Another significant challenge was that the target webpage was written in Chinese, making it difficult for me to understand its structure and locate key data points. Over time, this became easier as I collaborated with the **inventory team at Leuleu Accessorize**, whose insights helped me navigate the data more effectively. 
+Another significant challenge was that the target webpage was written in Chinese, making it difficult for me to understand its structure and locate key data points. Over time, this became easier as I collaborated with the **inventory team** of the business, whose insights helped me navigate the data more effectively. 
 
 Despite these challenges, I gained **valuable new skills** and discovered different approaches to problem-solving. This project was a **real-world experience** where I acted as a data analyst, helping a business owner gain insights into **order trends and volume** while demonstrating the importance of **data analytics in business operations and decision-making**. Most importantly, it was personally meaningful to support my sister in taking her **first step toward digital transformation**, reinforcing the impact that data-driven strategies can have on small businesses.
 
 # Conclusion
 
-This project provided a valuable hands-on experience in web scraping, data analysis, and problem-solving while supporting a real business need. Overcoming challenges such as language barriers and debugging code deepened my understanding of data automation and its role in business decision-making. More importantly, it highlighted the power of combining AI tools with human expertise to drive efficiency. By successfully delivering insights into order trends and volume, this project marked an important step toward digital transformation for my sister’s business, reinforcing the impact of data-driven strategies in modern business operations.
+This project provided valuable insights into order trends, volume fluctuations, and supplier relationships, helping the business optimize its purchasing strategy. By leveraging data analytics, we uncovered seasonality patterns, changes in spending behavior, and the impact of supplier diversification.
+
+Moreover, this dataset can be integrated with other business metrics such as revenue, sales, and costs to generate even more powerful insights. For example, analyzing how order frequency impacts revenue and procurement costs can help optimize cash flow and inventory management. Additionally, understanding the correlation between supplier discounts and overall profitability could refine supplier negotiation strategies.
+
+This project highlights the importance of data-driven decision-making and serves as a foundation for future business analytics initiatives.
+
+
 
