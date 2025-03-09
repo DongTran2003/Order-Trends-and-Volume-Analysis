@@ -1,12 +1,12 @@
 # Introduction
 
 ### About the project
-This project focuses on analyzing order trends and volume over time for **Leuleu Accessorize**, a growing jewelry and accessories brand in Vietnam. The goal is to provide data-driven insights to support decision-making and improve inventory and supplier management. Through in-depth analysis and recommendations, this project aims to help the business optimize its ordering process and enhance transparency in inventory tracking.
+This project focuses on analyzing order trends and volume over time for **Leuleu Accessorize**, a growing jewellry and accessories brand in Vietnam. The goal is to provide data-driven insights to **support decision-making** and **improve inventory and supplier management**. Through in-depth analysis and recommendations, this project aims to help the business **optimize its ordering process and enhance transparency in inventory tracking**.
 
 Beyond the technical aspects, this project is especially meaningful to me because it allows me to help my sister, the business owner, navigate the world of digital transformation. Before this, she managed her business without leveraging data, unaware of how data analytics could significantly improve her operations. By introducing her to data-driven decision-making, I am not only helping her solve existing business challenges but also demonstrating **the power of analytics in real-world applications**—a passion that drives my work as a data analyst.
 
 ### Case Study: Leuleu Accessorize
-Founded in 2014, Leuleu Accessorize began as a small boutique offering **affordable, stylish, and trendy jewelry**. Over the years, it expanded rapidly, adding new product lines such as Leuleu Lingerie and Leuleu Aeon Mall Shop. However, with this growth came operational challenges, particularly in inventory and supplier management.
+Founded in 2014, Leuleu Accessorize began as a small boutique offering **affordable, stylish, and trendy jewellry**. Over the years, it expanded rapidly, adding new product lines such as Leuleu Lingerie and Leuleu Aeon Mall Shop. However, with this growth came operational challenges, particularly in inventory and supplier management.
 
 #### The Business Challenge
 
@@ -18,7 +18,7 @@ In 2021, Leuleu Accessorize adopted its **first CRM system**, integrating multip
 
 To address these issues, my primary tasks in this project include:
 
-- **Extracting and consolidating a dataset containing detailed order records** from 2022 onwards, including order number, import dates, prices and quantities of items within each order, total paid before and after discount, and supplier details.
+- **Extracting and consolidating a dataset containing detailed order records** from 2022 onwards, including order number, import dates, prices and quantities of items within each order, total paid before and after discount of each order, and relevant supplier details.
 - **Performing order trend and volume analysis** to uncover actionable insights.
 
 This project has been an incredible opportunity to apply my data analysis skills to a real-world business while directly helping my sister transform her business operations. It also strengthens my expertise in data extraction, analysis, and visualization, which are essential skills in my career as a data analyst.
@@ -29,7 +29,7 @@ To accomplish the project goals, the following tools and techniques were utilize
     - Extracted all order data from **1688**, a Chinese E-commerce platform spanning 2022 to 2025 using **BeautifulSoup**
     - Used **Selenium** to navigate challenges like lack of APIs, CAPTCHA restrictions, and dynamic content loading.
 - **Data Cleaning & EDA with MySQL**: Processed, cleaned raw data using MySQL, and explored insights about order trends and spending patterns.
-- **Data Visualization with Power BI**: Designed interactive dashboards to visualize order trends and volume fluctuations, provising actionable insights to enhance decision-making in inventory and supplier management.
+- **Data Visualization with Power BI**: Designed interactive dashboards to visualize order trends and volume fluctuations, providing actionable insights to enhance decision-making in inventory and supplier management.
 
 # Web Scraping with Python 🕸️
 
@@ -40,23 +40,24 @@ Before scraping the data, it's essential to understand the structure of the 1688
 
 ### Inspecting and Locating Key Data Points
 
-To extract relevant details such as order number and supplier name, we use the browser’s Inspect Tool (press F12) to analyze the page’s HTML structure. This helps identify the exact elements where the data is stored. 
+To extract relevant details such as order number and supplier name, I used the browser’s Inspect Tool (press F12) to analyze the page’s HTML structure. This helps identify the exact elements where the data is stored. 
 
 ### Scraping Data with BeautifulSoup
 
-Once the key elements are located, we use BeautifulSoup to parse the HTML and extract the required information into a structured dataset. The [Local_file_scraping.ipynb](code/Local_file_scraping.ipynb) notebook demonstrates the full implementation, where we loop through each order to extract its details.
+Once the key elements are located, I used BeautifulSoup to parse the HTML and extract the required information into a structured dataset. The [Local_file_scraping.ipynb](code/Local_file_scraping.ipynb) notebook demonstrates the full implementation, where it loops through each order to extract its details.
 
-At this stage, we are testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website. 
+At this stage, I was testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website. 
 
 <img src='image/CSV.png' width='800' align='center'>
+<figcaption>CSV file of the output</figcaption>
 
 \
-The saved file now contains the following attributes: 
+The saved file now contains the following attributes, which represent for each item: 
 - ***order_id***
 - ***date***
 - ***supplier*** 
 - ***supplier_link***
-- ***image*** (which is saved as the url link to the image)
+- ***image*** (which is saved as the url link to the image of each product)
 - ***product_link*** 
 - ***price*** and ***quantity***
 - ***total_before_discount*** and ***total_after_discount***.
@@ -71,7 +72,7 @@ The key difference between scraping from a local file versus a live website is t
 - Log in manually to bypass **CAPTCHA**.
 - **Implement pagination** so the script can loop through multiple pages (from page 1 to 68, covering orders dating back to 2022), which can be done by adding 1 more loop to the current code.
 
-By incorporating these adjustments, we can extract all order details efficiently and store them in a structured dataset. The [Live_website_scraping](code/Live_website_scraping.ipynb) notebook shows how I addressed these tasks and import the extracted data into a [final CSV file](code/all_orders_2022_2025.csv), which has more than 24,000 rows, or ordered items.
+By incorporating these adjustments, we can extract all order details efficiently and store them in a structured dataset. The [Live_website_scraping](code/Live_website_scraping.ipynb) notebook shows how I addressed these tasks and import the extracted data into a [final CSV file](code/all_orders_2022_2025.csv), which has more than 24,000 rows, or unique items without their quantities.
 
 *Note: To protect the privacy of order details and supplier information, **certain columns have been removed**.
 
@@ -184,8 +185,8 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
 
 #### Seasonality and Order Volume Trends
-- Overall, the business has spent around ¥3.7M during the given period, purchasing 581,000 items across 2,598 orders.
-- **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in March (212 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**.
+- Overall, the business has spent around ¥3.7M (more than AUD $800,000) during the given period, purchasing 581,000 items across 2,598 orders.
+- **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in May (219 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**.
 - Notably, order volumes tend to **drop immediately after high-order months**, indicating that stock purchased during peak months sustains operations for the following 1-2 months before replenishment is needed. This pattern highlights an efficient inventory turnover cycle, ensuring stock availability while preventing overstocking.
 
 #### Spending behavior & Pricing Strategy
