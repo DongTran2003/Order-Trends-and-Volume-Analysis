@@ -194,6 +194,8 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
 - The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
 
+     <img src='image/Num_of_supplier.png' width=500>
+
 #### Supplier performance
 - Discounts were **nonexistent in 2022-2023 (0%)** but rose to **2% in 2024 and 7% in 2025**, indicating a **more aggressive discounting strategy in recent years**.
 - Despite the increase, the **total discount across all orders was only ¥36,563**, accounting for **less than 1%** of total spending—suggesting discounts **have not played a major role in cost reduction**.
@@ -238,3 +240,16 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - ✅ Assess whether frequent small orders are more cost-effective than bulk purchases.
 - ✅ Evaluate supplier expansion efficiency vs. complexity.
 - ✅ Use data-driven purchasing to secure better pricing and order timing
+
+
+# Challenges during the Project
+Before this project, my experience with web scraping and Python coding was limited. However, with a strong motivation to support my sister’s business, I conducted extensive research on automating data collection from web pages. While AI tools like ChatGPT provided valuable assistance, this project could not have been completed without human intervention. Debugging, understanding how the code works in different scenarios, and adapting AI-generated code to fit specific requirements required **critical thinking and problem-solving skills**. I believe that **levaraging AI alongside human domain and expertise** enhances project outcomes, making it a powerfull skill for any professional nowadays.
+
+Another significant challenge was that the target webpage was written in Chinese, making it difficult for me to understand its structure and locate key data points. Over time, this became easier as I collaborated with the **inventory team at Leuleu Accessorize**, whose insights helped me navigate the data more effectively. 
+
+Despite these challenges, I gained **valuable new skills** and discovered different approaches to problem-solving. This project was a **real-world experience** where I acted as a data analyst, helping a business owner gain insights into **order trends and volume** while demonstrating the importance of **data analytics in business operations and decision-making**. Most importantly, it was personally meaningful to support my sister in taking her **first step toward digital transformation**, reinforcing the impact that data-driven strategies can have on small businesses.
+
+# Conclusion
+
+This project provided a valuable hands-on experience in web scraping, data analysis, and problem-solving while supporting a real business need. Overcoming challenges such as language barriers and debugging code deepened my understanding of data automation and its role in business decision-making. More importantly, it highlighted the power of combining AI tools with human expertise to drive efficiency. By successfully delivering insights into order trends and volume, this project marked an important step toward digital transformation for my sister’s business, reinforcing the impact of data-driven strategies in modern business operations.
+
