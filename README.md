@@ -49,7 +49,7 @@ Once the key elements are located, I used BeautifulSoup to parse the HTML and ex
 At this stage, I was testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website. 
 
 <img src='image/CSV.png' width='800' align='center'>
-<figcaption>CSV file of the output</figcaption>
+<figcaption>The CSV file of the output</figcaption>
 
 \
 The saved file now contains the following attributes, which represent for each item: 
@@ -195,7 +195,7 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
 - The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
 
-     <img src='image/Num_of_supplier.png' width=300 >
+     <img src='image/Num_of_supplier.png' width=300 align='center'>
      <figcaption>Bar chart demonstrating the number of suppliers per year</figcaption>
 
 #### Supplier performance
