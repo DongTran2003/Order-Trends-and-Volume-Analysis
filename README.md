@@ -3,10 +3,13 @@
 ### About the project
 This project focuses on analyzing order trends and volume over time for **Leuleu Accessorize**, a growing jewellry and accessories brand in Vietnam. The goal is to provide data-driven insights to **support decision-making** and **improve inventory and supplier management**. Through in-depth analysis and recommendations, this project aims to help the business **optimize its ordering process and enhance transparency in inventory tracking**.
 
-Beyond the technical aspects, this project is especially meaningful to me because it allows me to help my sister, the business owner, navigate the world of digital transformation. Before this, she managed her business without leveraging data, unaware of how data analytics could significantly improve her operations. By introducing her to data-driven decision-making, I am not only helping her solve existing business challenges but also demonstrating **the power of analytics in real-world applications**—a passion that drives my work as a data analyst.
+Beyond the technical aspects, this project became even more meaningful when, in a casual conversation, I unexpectedly helped the business owner address supplier and stock management challenges. Recognizing this as a valuable learning opportunity, I took the initiative to apply my analytics skills to a real-world problem. Before this, the business relied on manual decision-making without leveraging data. By introducing data-driven strategies, I not only helped solve immediate challenges but also demonstrated the real-world impact of analytics—a passion that drives my work as a data analyst.
 
 ### Case Study: Leuleu Accessorize
-Founded in 2014, Leuleu Accessorize began as a small boutique offering **affordable, stylish, and trendy jewellry**. Over the years, it expanded rapidly, adding new product lines such as Leuleu Lingerie and Leuleu Aeon Mall Shop. However, with this growth came operational challenges, particularly in inventory and supplier management.
+Founded in 2014, Leuleu Accessorize began as a small boutique offering **affordable, stylish, and trendy jewellry**. Over the years, it expanded rapidly with 7 different stores, adding new product lines such as **Leuleu Lingerie** and **Leuleu Aeon Mall Shop**. However, with this growth came operational challenges, particularly in inventory and supplier management.
+
+  <img src="image/LeuleuShop.png">
+  <fig> The business's social media </fig>
 
 #### The Business Challenge
 
