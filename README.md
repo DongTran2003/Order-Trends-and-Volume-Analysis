@@ -187,8 +187,6 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 <img src='image/Dashboard.png' width='900'>
 
 
-<img src='image/Dashboard2.png' width='900'>
-
 #### Seasonality and Order Volume Trends
 - Overall, the business has spent around **3.7M Chinese Yuan** during the given period, purchasing **581,000 items across 2,598 orders**.
 - **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in May (219 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**.
