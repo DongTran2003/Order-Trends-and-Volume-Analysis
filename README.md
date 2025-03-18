@@ -1,3 +1,5 @@
+**NOTE**: This project was part of my contractual work for the business, conducted with the approval and consent of the business owner for educational purposes. Certain information has been removed to protect the business's privacy.
+
 # Introduction
 
 ### About the project
@@ -52,7 +54,8 @@ Once the key elements are located, I used BeautifulSoup to parse the HTML and ex
 At this stage, I was testing the script with a local HTML file to ensure the extraction logic works correctly before applying it to the live website. 
 
 <img src='image/CSV.png' width='800' align='center'>
-<figcaption>The CSV file of the output</figcaption>
+
+*The CSV file of the output*
 
 \
 The saved file now contains the following attributes, which represent for each item: 
@@ -189,18 +192,33 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
 #### Seasonality and Order Volume Trends
 - Overall, the business has spent around **3.7M Chinese Yuan** during the given period, purchasing **581,000 items across 2,598 orders**.
-- **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in May (219 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**.
+- **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in May (219 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**:
+
+    <img src='image/Seasonal_trend.png' width='300'>
+
+    *Seasonal Trend*
+
 - Notably, order volumes tend to **drop immediately after high-order months**, indicating that stock purchased during peak months sustains operations for the following 1-2 months before replenishment is needed. This pattern highlights an efficient inventory turnover cycle, ensuring stock availability while preventing overstocking.
 
 #### Spending behavior & Pricing Strategy
 - Despite total spending being the same for **2023 and 2024, around ¥1,5M**, the number of orders increased by 470 in 2024, suggesting a shift toward **lower-cost items** or **smaller, more frequent purchases**.  
 - Additionally, the **average spending per order** has steadily decreased, from ¥1,818 in 2022 to ¥872 in 2025. This trend suggests that the business is either adopting a lower pricing strategy or increasing order frequency while reducing the number of items per order. 
+
+    <img src='image/Spent_per_order.png' width=300>
+
+    *Average spent per order*
+
 - The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
+
+    <img src='image/Monthly_volume.png' width=300>
+
+    *Monthly volume of orders*
+
 - The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
 
      <img src='image/Num_of_supplier.png' width=300>
 
-    Bar chart demonstrating the number of suppliers per year
+    *Bar chart demonstrating the number of suppliers per year*
 
 #### Supplier performance
 - Discounts were **nonexistent in 2022-2023 (0%)** but rose to **2% in 2024 and 7% in 2025**, indicating a **more aggressive discounting strategy in recent years**.
