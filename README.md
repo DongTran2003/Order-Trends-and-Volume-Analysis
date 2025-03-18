@@ -1,4 +1,4 @@
-**NOTE**: This project was part of my contractual work for the business, conducted with the approval and consent of the business owner for educational purposes. Certain information has been removed to protect the business's privacy.
+**NOTE: This project was part of my contractual work for the business, conducted with the approval and consent of the business owner for educational purposes. Certain information has been removed to protect the business's privacy.**
 
 # Introduction
 
@@ -194,7 +194,7 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - Overall, the business has spent around **3.7M Chinese Yuan** during the given period, purchasing **581,000 items across 2,598 orders**.
 - **Order Seasonality**: In 2023 and 2024 (excluding 2022 and 2025 due to incomplete data), the highest order volumes were observed in May (219 orders), July (213 orders), and October (238 orders). This suggests a seasonal purchasing pattern, likely driven by preparations for peak demand periods, such as **summer** and **winter**:
 
-    <img src='image/Seasonal_trend.png' width='300'>
+    <img src='image/Seasonal_trend.png' width='900'>
 
     *Seasonal Trend*
 
@@ -204,19 +204,19 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 - Despite total spending being the same for **2023 and 2024, around ¥1,5M**, the number of orders increased by 470 in 2024, suggesting a shift toward **lower-cost items** or **smaller, more frequent purchases**.  
 - Additionally, the **average spending per order** has steadily decreased, from ¥1,818 in 2022 to ¥872 in 2025. This trend suggests that the business is either adopting a lower pricing strategy or increasing order frequency while reducing the number of items per order. 
 
-    <img src='image/Spent_per_order.png' width=300>
+    <img src='image/Spent_per_order.png' width=900>
 
     *Average spent per order*
 
 - The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
 
-    <img src='image/Monthly_volume.png' width=300>
+    <img src='image/Monthly_volume.png' width=900>
 
     *Monthly volume of orders*
 
 - The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
 
-     <img src='image/Num_of_supplier.png' width=300>
+     <img src='image/Num_of_supplier.png' width=900>
 
     *Bar chart demonstrating the number of suppliers per year*
 
