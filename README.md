@@ -11,7 +11,7 @@ Beyond the technical aspects, this project became even more meaningful when, in 
 Founded in 2014, Leuleu Accessorize began as a small boutique offering **affordable, stylish, and trendy jewellry**. Over the years, it expanded rapidly with 7 different stores, adding new product lines such as **Leuleu Lingerie** and **Leuleu Aeon Mall Shop**. However, with this growth came operational challenges, particularly in inventory and supplier management.
 
   <img src="image/LeuleuShop.png">
-  <fig> The business's social media </fig>
+  <fig> Fig 1. The business's social media </fig>
 
 #### The Business Challenge
 
@@ -42,6 +42,7 @@ Before scraping the data, it's essential to understand the structure of the 1688
 
 <img src='image/Order_list.png' width='800' align='center'> 
 
+*Fig 2. Structure of the web page*
 
 ### Inspecting and Locating Key Data Points
 
@@ -55,7 +56,7 @@ At this stage, I was testing the script with a local HTML file to ensure the ext
 
 <img src='image/CSV.png' width='800' align='center'>
 
-*The CSV file of the output*
+*Fig 3. The CSV file of the output*
 
 \
 The saved file now contains the following attributes, which represent for each item: 
@@ -189,6 +190,7 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
 <img src='image/Dashboard.png' width='900'>
 
+*Fig 4. Reporting Dashboard*
 
 #### Seasonality and Order Volume Trends
 - Overall, the business has spent around **3.7M Chinese Yuan** during the given period, purchasing **581,000 items across 2,598 orders**.
@@ -196,7 +198,7 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
     <img src='image/Seasonal_trend.png' width='500'>
 
-    *Seasonal Trend*
+    *Fig 5. Seasonal Trend*
 
 - Notably, order volumes tend to **drop immediately after high-order months**, indicating that stock purchased during peak months sustains operations for the following 1-2 months before replenishment is needed. This pattern highlights an efficient inventory turnover cycle, ensuring stock availability while preventing overstocking.
 
@@ -206,19 +208,19 @@ You can download the Power BI dashboard [here](code/LeuleuReport.pbix):
 
     <img src='image/Spent_per_order.png' width=500>
 
-    *Average spent per order*
+    *Fig 6. Average spent per order*
 
 - The **Monthly Volume of Orders chart** supports this observation, showing that while **average items per order have declined each year, average orders per month have significantly increased** (except for 2025, which currently only includes January—a historically low-order month).
 
     <img src='image/Monthly_volume.png' width=500>
 
-    *Monthly volume of orders*
+    *Fig 7. Monthly volume of orders*
 
 - The **Supplier Summary Table** provides insights into this strategy. The number of suppliers increased from **186 in 2022 to 325 in 2023, and 610 in 2024—a 200% annual growth rate**. This suggests the business is actively **sourcing from more suppliers** to **diversify its product offerings**, leading to an increase in order frequency while reducing the quantity per order.
 
      <img src='image/Num_of_supplier.png' width=500>
 
-    *Bar chart demonstrating the number of suppliers per year*
+    *Fig 8. Bar chart demonstrating the number of suppliers per year*
 
 #### Supplier performance
 - Discounts were **nonexistent in 2022-2023 (0%)** but rose to **2% in 2024 and 7% in 2025**, indicating a **more aggressive discounting strategy in recent years**.
